@@ -1,0 +1,32 @@
+{
+    "name": "Marius"
+    "email: "marius@hotmail.com"
+}
+{
+    "name": "Kyle"
+    "email: "Kyle@hotmail.com"
+}
+{
+    "name": "Amanda"
+    "email: "Amanda@hotmail.com"
+}
+{
+    "name": "Retha"
+    "email: "Retha@hotmail.com"
+}
+
+*****************Thougts*****************
+
+{
+    "thoughtText": "Marius"
+    "username: ""
+}
+
+
+*****************Reaction*****************
+
+{
+    "reactionBody": "Marius"
+    "username: ""
+    "thought": ""
+}

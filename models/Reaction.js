@@ -17,6 +17,8 @@ const reactionSchema = new mongoose.Schema({
     },
     username: { type:mongoose.Schema.ObjectId,
         ref: "User"},
+    thought: { type:mongoose.Schema.ObjectId,
+        ref: "Thought"},
       
     
   });
