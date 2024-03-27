@@ -35,7 +35,8 @@ const getUser = async (req, res) => {
            if(!mongoose.Types.ObjectId.isValid(id)){
             return   res.status(404).json({error: "no such user"});
         }
-           const user = await User.findById(id);
+           const user = await User.findById(id)
+           .populate("friends", "name");
 
            if (!user){
             return   res.status(404).json({error: "no such user"});
