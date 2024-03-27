@@ -4,10 +4,10 @@ const Reaction  = require('../models/Reaction');
 
 
 const createReaction = async (req, res) => {
-    const {Reactionbody, username, thought} = req.body;
+    const {reactionBody, username, thought} = req.body;
  // add doc to db
     try {
-        const newReaction = await Reaction.create({Reactionbody, username, thought})
+        const newReaction = await Reaction.create({reactionBody, username, thought})
        res.status(200).json(newReaction);
 
     }

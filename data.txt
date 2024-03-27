@@ -1,32 +1,37 @@
 {
-    "name": "Marius"
-    "email: "marius@hotmail.com"
+    "name": "Marius",
+    "email": "marius@hotmail.com"
 }
 {
-    "name": "Kyle"
-    "email: "Kyle@hotmail.com"
+    "name": "Kyle",
+    "email": "Kyle@hotmail.com"
 }
 {
-    "name": "Amanda"
-    "email: "Amanda@hotmail.com"
+    "name": "Amanda",
+    "email": "Amanda@hotmail.com"
 }
 {
-    "name": "Retha"
-    "email: "Retha@hotmail.com"
+    "name": "Retha",
+    "email": "Retha@hotmail.com"
 }
 
 *****************Thougts*****************
 
 {
-    "thoughtText": "Marius"
-    "username: ""
+    "thoughtText": "This is Marius",
+    "username": "6604399887050505732b90df"
+}
+
+{
+    "thoughtText": "This is Kyle",
+    "username": "660439be87050505732b90e1"
 }
 
 
 *****************Reaction*****************
 
 {
-    "reactionBody": "Marius"
-    "username: ""
-    "thought": ""
+    "reactionBody": "Great thought",
+    "username": "6604381de8d91ae18f0dcb33",
+    "thought": "6604387de8d91ae18f0dcb3a"
 }

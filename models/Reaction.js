@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const { Schema, model } = require('mongoose');
 const User = require('./User');
+const Thought = require('./Thought');
 
 
 const reactionSchema = new mongoose.Schema({
@@ -15,9 +16,9 @@ const reactionSchema = new mongoose.Schema({
         type: Date,
         default: () => Date.now()
     },
-    username: { type:mongoose.Schema.ObjectId,
+    username: { type:mongoose.Schema.Types.ObjectId,
         ref: "User"},
-    thought: { type:mongoose.Schema.ObjectId,
+    thought: { type:mongoose.Schema.Types.ObjectId,
         ref: "Thought"},
       
     

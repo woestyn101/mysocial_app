@@ -20,11 +20,11 @@ const thoughtSchema = new mongoose.Schema({
         default: () => Date.now()
     },
     username: {
-         type:mongoose.Schema.ObjectId,
+         type:mongoose.Schema.Types.ObjectId,
         ref: "User"},
 
     reactions: {
-        type:mongoose.Schema.ObjectId,
+        type:mongoose.Schema.Types.ObjectId,
         ref: "Reaction"
 
     } 
