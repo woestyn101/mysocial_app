@@ -1,4 +1,7 @@
 const mongoose = require('mongoose');
+const { Schema, model } = require('mongoose');
+const Thought = require('./Thought');
+const Reaction = require('./Reaction');
 
 
 const userSchema = new mongoose.Schema({
@@ -17,10 +20,11 @@ const userSchema = new mongoose.Schema({
         
     },
     thoughts:  {
-        type: [String],
+        type: [mongoose.Schema.Types.ObjectId],
+        ref:"Thought"
         },
     friends: {
-        type: [ mongoose.Schema.ObjectId],
+        type: [ mongoose.Schema.Types.ObjectId],
         ref: "User"
     }, 
     createdAt: {
@@ -38,4 +42,4 @@ const userSchema = new mongoose.Schema({
 
   
 
-module.exports = mongoose.model('User', userSchema);;
+module.exports = mongoose.model('User', userSchema);
