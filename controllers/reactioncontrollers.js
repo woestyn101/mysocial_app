@@ -35,7 +35,9 @@ const getReaction = async (req, res) => {
            if(!mongoose.Types.ObjectId.isValid(id)){
             return   res.status(404).json({error: "no such reaction"});
         }
-           const reaction = await Reaction.findById(id);
+           const reaction = await Reaction.findById(id)
+           .populate("username", "name")
+           .populate("thought", "thoughtText");
 
            if (!reaction){
             return   res.status(404).json({error: "no such reaction"});

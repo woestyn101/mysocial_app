@@ -35,7 +35,8 @@ const getThought = async (req, res) => {
            if(!mongoose.Types.ObjectId.isValid(id)){
             return   res.status(404).json({error: "no such thought"});
         }
-           const thought = await Thought.findById(id);
+           const thought = await Thought.findById(id)
+           .populate("username", "name");
 
            if (!thought){
             return   res.status(404).json({error: "no such thought"});
