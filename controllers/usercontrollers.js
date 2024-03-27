@@ -46,4 +46,25 @@ const getUser = async (req, res) => {
       
    }
 
-module.exports = {getUsers, getUser, createUser}
+   // delete aworkout
+
+const deleteUser = async (req, res) => {
+
+       
+    const {id} = req.params;
+
+        if(!mongoose.Types.ObjectId.isValid(id)){
+        return   res.status(404).json({error: "no such user"});
+        }
+        const user = await User.findOneAndDelete({_id: id});
+
+        if (!user){
+        return   res.status(404).json({error: "no such user"});
+        }
+
+        res.status(200).json(user);
+
+
+    }
+
+module.exports = {getUsers, getUser, createUser, deleteUser}
