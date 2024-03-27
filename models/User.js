@@ -36,9 +36,18 @@ const userSchema = new mongoose.Schema({
         type: Date,
         default: () => Date.now()
     },
+    
+    
+  }, {
+    toJSON: {
+        virtuals: true,
+      },
+      id: false,
+  }
+  );
 
-    
-    
+  userSchema.virtual('friendCount').get(function () {
+    return this.friends.length;
   });
 
   
