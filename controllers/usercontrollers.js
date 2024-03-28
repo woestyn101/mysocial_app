@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 
 // imporing user model
 const  User  = require('../models/User');
+const Thought = require('../models/Thought')
 
 
 // create user function
@@ -61,6 +62,7 @@ const deleteUser = async (req, res) => {
         return   res.status(404).json({error: "no such user"});
         }
         const user = await User.findOneAndDelete({_id: id});
+        const thought = await Thought.deleteMany({username: id});
 
         if (!user){
         return   res.status(404).json({error: "no such user"});

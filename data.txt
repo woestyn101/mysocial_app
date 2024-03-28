@@ -27,11 +27,11 @@ Helnea
 
 {
     "thoughtText": "This is Kyle",
-    "username": "66049d3e3c09fb74ea3ff99e"
+    "username": "6604c9a9a766de16338699de"
 }
 {
     "thoughtText": "This is Marius",
-    "username": "66049d2c3c09fb74ea3ff99c"
+    "username": "6604c9dba766de16338699e0"
 }
 {
     "thoughtText": "This is Helena",
