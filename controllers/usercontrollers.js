@@ -1,8 +1,11 @@
+// importing mongoose
 const mongoose = require("mongoose");
+
+// imporing user model
 const  User  = require('../models/User');
 
 
-
+// create user function
 const createUser = async (req, res) => {
     const {name, email} = req.body;
  // add doc to db
@@ -47,7 +50,7 @@ const getUser = async (req, res) => {
       
    }
 
-   // delete aworkout
+   // delete a user
 
 const deleteUser = async (req, res) => {
 
@@ -68,6 +71,8 @@ const deleteUser = async (req, res) => {
 
     }
 
+    // update a user
+
     const updateUser = async (req, res) => {
 
        
@@ -87,5 +92,6 @@ const deleteUser = async (req, res) => {
     
     }
     
+    // exporting all functions to be used in routes
 
 module.exports = {getUsers, getUser, createUser, deleteUser, updateUser}

@@ -1,3 +1,4 @@
+// import mongoose
 const mongoose = require('mongoose');
 
 // Wrap Mongoose around local connection to MongoDB

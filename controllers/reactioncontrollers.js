@@ -1,8 +1,11 @@
+// importing mongoose
 const mongoose = require("mongoose");
+
+// imporing Reaction model
 const Reaction  = require('../models/Reaction');
 
 
-
+// create a reaction
 const createReaction = async (req, res) => {
     const {reactionBody, username, thought} = req.body;
  // add doc to db
@@ -48,7 +51,7 @@ const getReaction = async (req, res) => {
       
    }
 
-   // delete reaction
+   // delete a  reaction
 
 const deleteReaction = async (req, res) => {
 
@@ -69,6 +72,8 @@ const deleteReaction = async (req, res) => {
 
     }
 
+    // update a reaction
+
     const updateReaction = async (req, res) => {
 
        
@@ -88,5 +93,6 @@ const deleteReaction = async (req, res) => {
     
     }
     
+    // exporting functions to be used in routes
 
 module.exports = {createReaction, getReactions, getReaction, deleteReaction, updateReaction}

@@ -1,8 +1,11 @@
+// importing mongoose
 const mongoose = require("mongoose");
+
+//importing Thought model
 const Thought  = require('../models/Thought');
 
 
-
+// create a Thought
 const createThought = async (req, res) => {
     const {thoughtText, username} = req.body;
  // add doc to db
@@ -68,6 +71,8 @@ const deleteThought = async (req, res) => {
 
     }
 
+    // update a Thought
+
     const updateThought = async (req, res) => {
 
        
@@ -87,5 +92,6 @@ const deleteThought = async (req, res) => {
     
     }
     
+    // exporting all functions to be used in routes
 
 module.exports = {createThought, getThoughts, getThought, deleteThought, updateThought}

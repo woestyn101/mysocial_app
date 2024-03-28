@@ -15,16 +15,27 @@
     "email": "Retha@hotmail.com"
 }
 
+
+Helnea
+
 *****************Thougts*****************
 
 {
-    "thoughtText": "This is Marius",
-    "username": "6604399887050505732b90df"
+    "thoughtText": "This is Alex",
+    "username": "6604541b2febff55772880ca"
 }
 
 {
     "thoughtText": "This is Kyle",
-    "username": "660439be87050505732b90e1"
+    "username": "66049d3e3c09fb74ea3ff99e"
+}
+{
+    "thoughtText": "This is Marius",
+    "username": "66049d2c3c09fb74ea3ff99c"
+}
+{
+    "thoughtText": "This is Helena",
+    "username": "6604479986aa3d7820dbc212"
 }
 
 
@@ -32,12 +43,12 @@
 
 {
     "reactionBody": "Great thought",
-    "username": "6604399887050505732b90df",
-    "thought": "660439ef87050505732b90e5"
+    "username": "6604541b2febff55772880ca",
+    "thought": "660455072febff55772880d5"
 }
 
 {
     "reactionBody": "Awesome thought",
-    "username": "660439be87050505732b90e1",
-    "thought": "660439e387050505732b90e3"
+    "username": "660454042febff55772880c6",
+    "thought": "660454ee2febff55772880d1"
 }
