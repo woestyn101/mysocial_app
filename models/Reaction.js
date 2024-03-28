@@ -1,13 +1,13 @@
 // importing mongoose module
-const mongoose = require('mongoose');
+//const mongoose = require('mongoose');
 const { Schema, model } = require('mongoose');
 
-// importing other models
+//importing other models
 const User = require('./User');
 const Thought = require('./Thought');
 
 //creating reaction schema
-const reactionSchema = new mongoose.Schema({
+const reactionSchema = new Schema({
      reactionBody: {
          type: String, 
          required: true,
@@ -19,15 +19,15 @@ const reactionSchema = new mongoose.Schema({
         type: Date,
         default: () => Date.now()
     },
-    username: { type:mongoose.Schema.Types.ObjectId,
+    username: { type:Schema.Types.ObjectId,
         ref: "User"},
-    thought: { type:mongoose.Schema.Types.ObjectId,
+    thought: { type:Schema.Types.ObjectId,
         ref: "Thought"},
       
     
   });
 
   // exporting reaction model
-  const Reaction = mongoose.model('Reaction', reactionSchema);
+  const Reaction = model('reaction', reactionSchema);
 
 module.exports = Reaction;

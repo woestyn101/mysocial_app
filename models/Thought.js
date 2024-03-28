@@ -1,6 +1,6 @@
 // importing mongoose
-const mongoose = require('mongoose');
-const { Schema, Types } = require('mongoose');
+//const mongoose = require('mongoose');
+const { Schema, Types, model } = require('mongoose');
 
 // importing other models
 const Reaction = require('./Reaction');
@@ -8,7 +8,7 @@ const User = require('./User');
 
 
 // createing Schema for Thoughts
-const thoughtSchema = new mongoose.Schema({
+const thoughtSchema = new Schema({
 
      thoughtText: {
          type: String, 
@@ -23,19 +23,19 @@ const thoughtSchema = new mongoose.Schema({
         default: () => Date.now()
     },
     username: {
-         type:mongoose.Schema.Types.ObjectId,
-        ref: "User"},
+         type:Schema.Types.ObjectId,
+        ref: "user"},
 
-    reactions: {
-        type:mongoose.Schema.Types.ObjectId,
-        ref: "Reaction"
+    reactions: [{
+        type: Schema.Types.ObjectId,
+        ref: "reaction"
 
-    }    
+    }    ]
    
     
   });
 
   // exporting model
-const Thought = mongoose.model('Thought', thoughtSchema);
+const Thought = model('thought', thoughtSchema);
 
-module.exports =Thought;
+module.exports = Thought;

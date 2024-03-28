@@ -4,6 +4,9 @@ const mongoose = require("mongoose");
 // imporing Reaction model
 const Reaction  = require('../models/Reaction');
 
+const  User  = require('../models/User');
+const Thought = require('../models/Thought')
+
 
 // create a reaction
 const createReaction = async (req, res) => {
@@ -11,6 +14,15 @@ const createReaction = async (req, res) => {
  // add doc to db
     try {
         const newReaction = await Reaction.create({reactionBody, username, thought})
+
+        const updatethought = await Thought.findOneAndUpdate({_id: req.body.thought},
+            { $addToSet :
+                {reactions: newReaction._id}},
+            {new: true}
+
+
+           );
+
        res.status(200).json(newReaction);
 
     }

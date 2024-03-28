@@ -5,7 +5,7 @@ const express = require('express');
 const db = require('./config/connection');
 
 // importing the mongoose package
-const mongoose = require('mongoose');
+//const mongoose = require('mongoose');
 
 // importig routes for server
 const userRoutes = require("./routes/userroutes");

@@ -57,6 +57,9 @@ https://www.youtube.com/watch?v=DZBGEVgL2eE
 
 https://stackoverflow.com/questions/18022365/mongoose-validate-email-syntax
 
+https://www.geeksforgeeks.org/mongoose-deletemany-function/
+
+
 ## License
 
 MIT

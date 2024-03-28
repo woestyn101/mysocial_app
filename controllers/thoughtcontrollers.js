@@ -3,6 +3,9 @@ const mongoose = require("mongoose");
 
 //importing Thought model
 const Thought  = require('../models/Thought');
+// imporing user model
+const  User  = require('../models/User');
+const Reaction  = require('../models/Reaction');
 
 
 // create a Thought
@@ -11,6 +14,14 @@ const createThought = async (req, res) => {
  // add doc to db
     try {
         const newThought = await Thought.create({thoughtText, username})
+        const user = await User.findOneAndUpdate({_id: req.body.username},
+            { $addToSet :
+                {thoughts: newThought._id}},
+            {new: true}
+
+
+           );
+        
        res.status(200).json(newThought);
 
     }
@@ -39,7 +50,7 @@ const getThought = async (req, res) => {
             return   res.status(404).json({error: "no such thought"});
         }
            const thought = await Thought.findById(id)
-           .populate("username", "name");
+           //.populate("username", "name");
 
            if (!thought){
             return   res.status(404).json({error: "no such thought"});

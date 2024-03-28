@@ -1,13 +1,13 @@
 // importing mongoose module
-const mongoose = require('mongoose');
+//const mongoose = require('mongoose');
 const { Schema, model } = require('mongoose');
 
 // importing other models
 const Thought = require('./Thought');
-const Reaction = require('./Reaction');
+// const Reaction = require('./Reaction');
 
 // creating a schema for the user
-const userSchema = new mongoose.Schema({
+const userSchema = new Schema({
     name: {
          type: String, 
          required: true,
@@ -22,13 +22,13 @@ const userSchema = new mongoose.Schema({
         match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address']      
         
     },
-    thoughts:  {
-        type: [mongoose.Schema.Types.ObjectId],
-        ref:"Thought"
-        },
+    thoughts: [ {
+        type: Schema.Types.ObjectId,
+        ref: 'thought',
+        }],
     friends: [{
-        type: [mongoose.Schema.Types.ObjectId],
-        ref: "User"
+        type: Schema.Types.ObjectId,
+        ref: "user"
     }] , 
     createdAt: {
         type: Date,
@@ -58,4 +58,5 @@ const userSchema = new mongoose.Schema({
 
   
 //exporting the model
-module.exports = mongoose.model('User', userSchema);
+const User =  model('user', userSchema);
+module.exports = User;

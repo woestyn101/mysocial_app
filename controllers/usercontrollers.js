@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 // imporing user model
 const  User  = require('../models/User');
 const Thought = require('../models/Thought')
-
+const Reaction  = require('../models/Reaction');
 
 // create user function
 const createUser = async (req, res) => {
@@ -25,10 +25,12 @@ const getUsers = async (req, res) => {
     
            
            const users = await User.find({})
+           .populate("thoughts")
+           .populate("friends")
            .sort({createdAt: -1})
           res.status(200).json(users);
    
-      
+     
    }
 
    //get a single user
@@ -40,7 +42,7 @@ const getUser = async (req, res) => {
             return   res.status(404).json({error: "no such user"});
         }
            const user = await User.findById(id)
-           .populate("friends", "name");
+           //.populate("friends", "name");
 
            if (!user){
             return   res.status(404).json({error: "no such user"});

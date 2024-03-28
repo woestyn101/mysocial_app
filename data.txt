@@ -21,21 +21,26 @@ Helnea
 *****************Thougts*****************
 
 {
-    "thoughtText": "This is Alex",
-    "username": "6604541b2febff55772880ca"
+    "thoughtText": "This is Amanda",
+    "username": "660587c21c9fb1a74935df97"
 }
 
 {
     "thoughtText": "This is Kyle",
-    "username": "6604c9a9a766de16338699de"
+    "username": "6605d85d51e02bc9bd50ea6e"
 }
 {
     "thoughtText": "This is Marius",
-    "username": "6604f859bd632532e0c867eb"
+    "username": "6605d742914d90862949a69b"
 }
 {
-    "thoughtText": "This is Helena",
-    "username": "6604479986aa3d7820dbc212"
+    "thoughtText": "This is Retha",
+    "username": "660587cc1c9fb1a74935df99"
+}
+
+{
+    "thoughtText": "This is Jack",
+    "username": "66058befe9df3b0534d533b2"
 }
 
 
@@ -43,8 +48,8 @@ Helnea
 
 {
     "reactionBody": "Great thought",
-    "username": "6604541b2febff55772880ca",
-    "thought": "660455072febff55772880d5"
+    "username": "6605d85051e02bc9bd50ea6c",
+    "thought": "6605d88651e02bc9bd50ea71"
 }
 
 {
