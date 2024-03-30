@@ -16,8 +16,16 @@
 }
 
 {
-    "friends" : ["6605d85d51e02bc9bd50ea6e", "6605d85051e02bc9bd50ea6c"]
+    "name": "Alex",
+    "email": "Alex@hotmail.com"
 }
+
+{
+    "friends" : ["6606e0c7da6d6c7b88b40a8d"]
+}
+
+thought: 6605d88651e02bc9bd50ea71
+reaction: 6605de6dad966a1f24cd551c
 
 
 Helnea
@@ -25,8 +33,8 @@ Helnea
 *****************Thougts*****************
 
 {
-    "thoughtText": "This is Amanda",
-    "username": "6606e0c7da6d6c7b88b40a8d"
+    "thoughtText": "This is Tanya",
+    "username": "6607b122ff584000e0275a53"
 }
 
 {
@@ -35,7 +43,7 @@ Helnea
 }
 {
     "thoughtText": "This is Marius",
-    "username": "6605e36094053e43ebe78af0"
+    "username": "6607b633043b64bf40b6ade5"
 }
 {
     "thoughtText": "This is Retha",
@@ -51,9 +59,9 @@ Helnea
 *****************Reaction*****************
 
 {
-    "reactionBody": "Great thought",
-    "username": "6605d85d51e02bc9bd50ea6e",
-    "thought": "6606e1bbda6d6c7b88b40a9a"
+    "reactionBody": "Welcome Tanya",
+    "username": "6607aea9e42adfad4e2cb136",
+    "thought": "6607b204ff584000e0275a64"
 }
 
 {

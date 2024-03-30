@@ -51,8 +51,8 @@ const getReaction = async (req, res) => {
             return   res.status(404).json({error: "no such reaction"});
         }
            const reaction = await Reaction.findById(id)
-           .populate("username", "name")
-           .populate("thought", "thoughtText");
+        //    .populate("username", "name")
+        //    .populate("thought", "thoughtText");
 
            if (!reaction){
             return   res.status(404).json({error: "no such reaction"});
@@ -79,7 +79,7 @@ const deleteReaction = async (req, res) => {
         return   res.status(404).json({error: "no such reaction"});
         }
 
-        res.status(200).json(user);
+        res.status(200).json(reaction);
 
 
     }

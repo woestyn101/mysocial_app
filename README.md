@@ -36,7 +36,7 @@ During this project I learned how to:
   
 ## Video
 
-https://drive.google.com/file/d/1wnwqNXqbFcw0-7IS5ksbhcvEcwnGEOuQ/view?usp=sharing
+https://drive.google.com/file/d/1AdGqEGnHIE5CYXYFeO6qTRFd60itB0I7/view?usp=sharing
 
 
 ## Usage
