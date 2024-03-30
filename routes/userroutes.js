@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const express = require("express");
 
 // importing functions from controllers 
-const {createUser, getUsers, getUser, deleteUser, updateUser} = require('../controllers/usercontrollers');
+const {createUser, getUsers, getUser, deleteUser, updateUser, deleteFriend, addFriend} = require('../controllers/usercontrollers');
 
 // importing router
 const router = express.Router();
@@ -22,6 +22,12 @@ router.delete('/:id', deleteUser);
 
 // route to update user
 router.put('/:id', updateUser);
+
+// route to delete user friend
+router.delete('/deletefriend/:userId/:friendId', deleteFriend);
+
+// route to delete user friend
+router.post('/:userId/:friendId', addFriend);
 
 // exporting router
 module.exports = router;

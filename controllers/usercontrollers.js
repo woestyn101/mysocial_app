@@ -83,19 +83,122 @@ const deleteUser = async (req, res) => {
         const {id} = req.params;
     
     if(!mongoose.Types.ObjectId.isValid(id)){
-     return   res.status(404).json({error: "no such workout"});
+     return   res.status(404).json({error: "no such user id"});
     }
-    const user = await User.findOneAndUpdate({_id: id}, {...req.body});
-    
+  let user;
+    try {
+        user = await User.findOneAndUpdate({_id: id}, {...req.body},
+            { 
+                runValidators: true, new: true
+            }
+            );
+
+            
     if (!user){
-     return   res.status(404).json({error: "no such workout"});
+        return   res.status(404).json({error: "no such user"});
+       }
+       
+       res.status(200).json(user);
+
+    } catch (error){
+        console.log("Inside catch block");
+    console.log(error.message);
+    res.status(404).json({error: error.message});
     }
     
-    res.status(200).json(user);
     
     
     }
+
+    // add user friend
+
+
+    const addFriend = async (req, res) => {
+
+       
+        const {userId, friendId} = req.params;
+    
+    if(!mongoose.Types.ObjectId.isValid(userId)){
+     return   res.status(404).json({error: "no such user id"});
+    }
+  let user;
+    try {
+        user = await User.findOneAndUpdate({_id: userId}, 
+            {            
+             $addToSet: {friends: friendId}
+            
+            },
+
+            
+            { 
+                runValidators: true, new: true
+            }
+            );
+
+            
+    if (!user){
+        return   res.status(404).json({error: "no such user"});
+       }
+       
+       res.status(200).json(user);
+
+    } catch (error){
+        console.log("Inside catch block");
+    console.log(error.message);
+    res.status(404).json({error: error.message});
+    }
+    
+    
+    
+    }
+
+
+    // delete user friend
+
+
+
+    const deleteFriend = async (req, res) => {
+
+       
+        const {userId, friendId} = req.params;
+    
+    if(!mongoose.Types.ObjectId.isValid(userId)){
+     return   res.status(404).json({error: "no such user id"});
+    }
+  let user;
+    try {
+        user = await User.findOneAndUpdate({_id: userId}, 
+            {            
+             $pull: {friends: friendId}
+            
+            },
+
+            
+            { 
+                runValidators: true, new: true
+            }
+            );
+
+            
+    if (!user){
+        return   res.status(404).json({error: "no such user"});
+       }
+       
+       res.status(200).json(user);
+
+    } catch (error){
+        console.log("Inside catch block");
+    console.log(error.message);
+    res.status(404).json({error: error.message});
+    }
+    
+    
+    
+    }
+
+    
+
     
     // exporting all functions to be used in routes
 
-module.exports = {getUsers, getUser, createUser, deleteUser, updateUser}
+module.exports = {getUsers, getUser, createUser, deleteUser, updateUser, deleteFriend, addFriend}
