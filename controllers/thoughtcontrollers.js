@@ -35,6 +35,7 @@ const getThoughts = async (req, res) => {
     
            
            const thoughts = await Thought.find({})
+           .populate("reactions")
            .sort({createdAt: -1})
           res.status(200).json(thoughts);
    
@@ -50,6 +51,7 @@ const getThought = async (req, res) => {
             return   res.status(404).json({error: "no such thought"});
         }
            const thought = await Thought.findById(id)
+           .populate("reactions")
            //.populate("username", "name");
 
            if (!thought){

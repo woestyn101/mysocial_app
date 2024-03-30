@@ -15,6 +15,10 @@
     "email": "Retha@hotmail.com"
 }
 
+{
+    "friends" : ["6605d85d51e02bc9bd50ea6e", "6605d85051e02bc9bd50ea6c"]
+}
+
 
 Helnea
 
@@ -22,7 +26,7 @@ Helnea
 
 {
     "thoughtText": "This is Amanda",
-    "username": "660587c21c9fb1a74935df97"
+    "username": "6606e0c7da6d6c7b88b40a8d"
 }
 
 {
@@ -31,7 +35,7 @@ Helnea
 }
 {
     "thoughtText": "This is Marius",
-    "username": "6605d742914d90862949a69b"
+    "username": "6605e36094053e43ebe78af0"
 }
 {
     "thoughtText": "This is Retha",
@@ -48,8 +52,8 @@ Helnea
 
 {
     "reactionBody": "Great thought",
-    "username": "6605d85051e02bc9bd50ea6c",
-    "thought": "6605d88651e02bc9bd50ea71"
+    "username": "6605d85d51e02bc9bd50ea6e",
+    "thought": "6606e1bbda6d6c7b88b40a9a"
 }
 
 {
